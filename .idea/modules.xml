@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common_lib/common_lib.iml" filepath="$PROJECT_DIR$/common_lib/common_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_anchor/module_anchor.iml" filepath="$PROJECT_DIR$/module_anchor/module_anchor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_app/module_app.iml" filepath="$PROJECT_DIR$/module_app/module_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_live_im/module_live_im.iml" filepath="$PROJECT_DIR$/module_live_im/module_live_im.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_main/module_main.iml" filepath="$PROJECT_DIR$/module_main/module_main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_mine/module_mine.iml" filepath="$PROJECT_DIR$/module_mine/module_mine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redlip.iml" filepath="$PROJECT_DIR$/redlip.iml" />
+    </modules>
+  </component>
+</project>

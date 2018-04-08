@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FilletView">
+        <attr name="fillet_ContentColor">#000</attr>
+        <attr name="fillet_backgroundColor">#fff</attr>
+        <attr name="fillet_leftRadius">5dp</attr>
+    </declare-styleable>
+</resources>
