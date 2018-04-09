@@ -38,6 +38,7 @@ public class FilletView extends View {
     public FilletView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         TypedArray typedArray=context.obtainStyledAttributes(attrs, R.styleable.FilletView);
+
         setRadius();
     }
 
