@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.kuaibo.commonlib.R;
 public class FilletView extends View {
 
     //左右边圆的角度
-    private float leftRadius, rightRadius;
+    private float leftTopRadius, leftBottomRadius, rightTopRadius, rightbottomRadius;
     //内容字体大小,大小
     private int contentTextSize, contentTextColor;
     //上下左右内容边距
@@ -28,13 +29,16 @@ public class FilletView extends View {
     //背景颜色
     private int backgroundColor;
 
+    private float[] radiusArray = {0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f};
+
     public FilletView(Context context) {
         this(context, null);
     }
 
     public FilletView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-//        TypedArray typedArray=context.obtainStyledAttributes(attrs, R.styleable.)
+        TypedArray typedArray=context.obtainStyledAttributes(attrs, R.styleable.FilletView);
+        setRadius();
     }
 
     @Override
@@ -53,17 +57,25 @@ public class FilletView extends View {
         super.onDraw(canvas);
         int width = canvas.getWidth();
         int height = canvas.getHeight();
-
-        Paint paint = new Paint();
-        //设置画笔为无齿锯
-        paint.setAntiAlias(true);
-        paint.setColor(backgroundColor);
-        paint.setStyle(Paint.Style.FILL_AND_STROKE);
         RectF rectF = new RectF();
         rectF.left = 0;
         rectF.right = width;
         rectF.top = 0;
         rectF.bottom = height;
-        canvas.drawRoundRect(rectF, leftRadius, rightRadius, paint);
+        Path path = new Path();
+        path.addRoundRect(rectF, radiusArray, Path.Direction.CW);
+        canvas.clipPath(path);
+    }
+
+    private void setRadius() {
+        radiusArray[0] = leftTopRadius;
+        radiusArray[1] = leftTopRadius;
+        radiusArray[2] = rightTopRadius;
+        radiusArray[3] = rightTopRadius;
+        radiusArray[4] = rightbottomRadius;
+        radiusArray[5] = rightbottomRadius;
+        radiusArray[6] = leftBottomRadius;
+        radiusArray[7] = leftBottomRadius;
+        invalidate();
     }
 }

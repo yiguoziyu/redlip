@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="FilletView">
-        <attr name="fillet_ContentColor">#000</attr>
-        <attr name="fillet_backgroundColor">#fff</attr>
-        <attr name="fillet_leftRadius">5dp</attr>
+        <attr name="fillet_ContentColor" format="color">@color/colorPrimary</attr>
+        <attr name="fillet_backgroundColor" format="color">@color/white</attr>
+        <attr name="fillet_leftTopRadius" format="float">5dp</attr>
+        <attr name="fillet_leftBottomRadius" format="float">5dp</attr>
+        <attr name="fillet_rightTopRadius" format="float">5dp</attr>
+        <attr name="fillet_rightbottomRadius" format="float">5dp</attr>
     </declare-styleable>
 </resources>
